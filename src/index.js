@@ -19,13 +19,13 @@ class App extends React.Component {
   
   
   render() {
-      return (
-    <div>
-      Lattitude:{this.state.lat}
-      <br />
-      Error: {this.state.errorMessage} 
-    </div>
-      )  
+    if (this.state.errorMessage && !this.state.lat) {
+      return <div>Error: {this.state.errorMessage}</div>
+    } else if (!this.state.errorMessage && this.state.lat) {
+      return <div>latitude: {this.state.lat}</div>
+    } else {
+      return <div>Loading...</div>
+    }
     }
 }
 
