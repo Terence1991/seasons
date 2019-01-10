@@ -21,7 +21,7 @@ class App extends React.Component {
     } else if (!this.state.errorMessage && this.state.lat) {
       return <Season lat={this.state.lat}/>
     } else {
-      return <Loader />
+      return <Loader message="Please acsept us using your location"/>
     }
     }
 }
