@@ -11,6 +11,16 @@ right: 10 px;
 
 }
 
+.season-display.winter i {
+  color: blue;
+
+}
+
+.season-display.summer i {
+  color: orange
+
+}
+
 .season-display {
   display: flex;
   justify-content: center;
